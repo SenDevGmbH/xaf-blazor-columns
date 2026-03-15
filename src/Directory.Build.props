@@ -5,7 +5,8 @@
     <Product>SenDev.Xaf.Blazor.Columns</Product>
     <Copyright>Copyright (c) SenDev GmbH 2026</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/SenDevGmbH/xaf-blazor-columns</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SenDevGmbH/xaf-blazor-columns</RepositoryUrl>
+    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
     <Description>
         An XAF module that enhances column width management in DevExpress XAF Blazor applications.
         It adds Proportional column width mode to the standard grid list editor, enabling responsive column sizing based on relative proportions.

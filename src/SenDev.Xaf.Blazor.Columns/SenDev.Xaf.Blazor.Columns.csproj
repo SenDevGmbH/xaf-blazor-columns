@@ -5,12 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Authors>SenDev</Authors>
-    <Company>SenDev</Company>
-    <Description>XAF Module for enhanced column width management in Blazor applications. Supports Relative and BestFit column width modes in addition to the standard pixel-based widths.</Description>
-    <PackageProjectUrl>https://github.com/sendev/SenDev.Xaf.Blazor.Columns</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/sendev/SenDev.Xaf.Blazor.Columns</RepositoryUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>XAF;Blazor;DevExpress;Column;Width;Grid</PackageTags>
   </PropertyGroup>
 
