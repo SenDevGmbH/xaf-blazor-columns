@@ -44,6 +44,8 @@ public sealed partial class SenDevXafBlazorColumnsModule : ModuleBase
         base.RegisterEditorDescriptors(editorDescriptorsFactory);
         editorDescriptorsFactory.RegisterListEditorAlias(nameof(SenDevGridListEditor), typeof(object), true);
         editorDescriptorsFactory.RegisterListEditor(nameof(SenDevGridListEditor), typeof(object), typeof(SenDevGridListEditor), true);
+        editorDescriptorsFactory.RegisterListEditorAlias(nameof(SenDevTreeListEditor), typeof(object), true);
+        editorDescriptorsFactory.RegisterListEditor(nameof(SenDevTreeListEditor), typeof(object), typeof(SenDevTreeListEditor), true);
     }
 
 }
