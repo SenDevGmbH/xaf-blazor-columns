@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application Title="SenDev.Xaf.Blazor.Columns.Demo">
+	<Options>
+		<LayoutManagerOptions RequiredFieldMark="*" />
+	</Options>
+	<SchemaModules>
+		<SchemaModule Name="SystemModule" Version="25.2.6.0" IsNewNode="True" />
+	</SchemaModules>
+	<Views>
+		<ListView Id="Task_ListView" MasterDetailMode="ListViewAndDetailView" MasterDetailView="Task_DetailView">
+			<Columns ColumnWidthMode="1">
+				<ColumnInfo Id="Parent" Width="90" Index="-1" Removed="True" />
+				<ColumnInfo Id="PercentComplete" Width="183" Index="-1" Removed="True" />
+				<ColumnInfo Id="Name" Width="200" MaxLength="200" />
+				<ColumnInfo Id="StartDate" Width="100" />
+				<ColumnInfo Id="DueDate" Width="90" />
+				<ColumnInfo Id="Description" Width="220" Index="3" />
+				<ColumnInfo Id="Oid" Removed="True" />
+			</Columns>
+		</ListView>
+		<ListView Id="SecondTask_ListView" MasterDetailMode="ListViewAndDetailView" MasterDetailView="SecTask_DetailView">
+			<Columns ColumnWidthMode="2">
+				<ColumnInfo Id="Parent" Width="90" Index="-1" Removed="True" />
+				<ColumnInfo Id="PercentComplete" Width="183" Index="-1" Removed="True" />
+				<ColumnInfo Id="Name" Width="200" MaxLength="200" />
+				<ColumnInfo Id="StartDate" Width="100" />
+				<ColumnInfo Id="DueDate" Width="90" />
+				<ColumnInfo Id="Description" Width="220" Index="3" />
+				<ColumnInfo Id="Oid" Removed="True" />
+			</Columns>
+		</ListView>
+	</Views>
+</Application>
