@@ -10,9 +10,9 @@ namespace SenDev.Xaf.Blazor.Columns.Demo.Module.BusinessObjects;
 [DefaultProperty(nameof(Name))]
 [ImageName("BO_Task")]
 [NavigationItem("Demo")]
-public class Task : BaseObject, ITreeNode
+public class TreeListColumnProportionalSample : BaseObject, ITreeNode
 {
-    public Task(Session session) : base(session)
+    public TreeListColumnProportionalSample(Session session) : base(session)
     {
     }
 
@@ -53,17 +53,17 @@ public class Task : BaseObject, ITreeNode
         set => SetPropertyValue(nameof(PercentComplete), ref percentComplete, value);
     }
 
-    Task parent;
-    [Association("Task-Children")]
-    public Task Parent
+    TreeListColumnProportionalSample parent;
+    [Association("SecondTask-Children")]
+    public TreeListColumnProportionalSample Parent
     {
         get => parent;
         set => SetPropertyValue(nameof(Parent), ref parent, value);
     }
 
-    [Association("Task-Children")]
+    [Association("SecondTask-Children")]
     [Aggregated]
-    public XPCollection<Task> Children => GetCollection<Task>(nameof(Children));
+    public XPCollection<TreeListColumnProportionalSample> Children => GetCollection<TreeListColumnProportionalSample>(nameof(Children));
 
     ITreeNode ITreeNode.Parent => Parent;
 

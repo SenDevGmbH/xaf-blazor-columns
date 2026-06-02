@@ -3,8 +3,8 @@ using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Updating;
 using DemoGridColumnPixelSample = SenDev.Xaf.Blazor.Columns.Demo.Module.BusinessObjects.GridColumnPixelSample;
 using DemoGridColumnProportionalSample = SenDev.Xaf.Blazor.Columns.Demo.Module.BusinessObjects.GridColumnProportionalSample;
-using DemoSecondTask = SenDev.Xaf.Blazor.Columns.Demo.Module.BusinessObjects.SecondTask;
-using DemoTask = SenDev.Xaf.Blazor.Columns.Demo.Module.BusinessObjects.Task;
+using DemoSecondTask = SenDev.Xaf.Blazor.Columns.Demo.Module.BusinessObjects.TreeListColumnProportionalSample;
+using DemoTask = SenDev.Xaf.Blazor.Columns.Demo.Module.BusinessObjects.TreeListColumnPixelSample;
 
 namespace SenDev.Xaf.Blazor.Columns.Demo.Module.DatabaseUpdate;
 // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Updating.ModuleUpdater
