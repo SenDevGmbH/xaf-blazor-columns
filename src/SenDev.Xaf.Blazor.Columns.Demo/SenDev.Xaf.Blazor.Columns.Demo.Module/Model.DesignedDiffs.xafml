@@ -29,5 +29,33 @@
 				<ColumnInfo Id="Oid" Removed="True" />
 			</Columns>
 		</ListView>
+		<ListView Id="GridColumnPixelSample_ListView">
+			<Columns ColumnWidthMode="1">
+				<ColumnInfo Id="Title" Width="230" />
+				<ColumnInfo Id="Owner" Width="120" />
+				<ColumnInfo Id="Phase" Width="130" />
+				<ColumnInfo Id="StartDate" Width="110" />
+				<ColumnInfo Id="DueDate" Width="110" />
+				<ColumnInfo Id="Priority" Width="80" />
+				<ColumnInfo Id="EstimatedCost" Width="130" />
+				<ColumnInfo Id="Blocked" Width="90" />
+				<ColumnInfo Id="Notes" Width="320" />
+				<ColumnInfo Id="Oid" Removed="True" />
+			</Columns>
+		</ListView>
+		<ListView Id="GridColumnProportionalSample_ListView">
+			<Columns ColumnWidthMode="2">
+				<ColumnInfo Id="Title" Width="260" />
+				<ColumnInfo Id="Account" Width="150" />
+				<ColumnInfo Id="Region" Width="130" />
+				<ColumnInfo Id="ReportDate" Width="110" />
+				<ColumnInfo Id="ItemCount" Width="90" />
+				<ColumnInfo Id="Revenue" Width="130" />
+				<ColumnInfo Id="Margin" Width="90" />
+				<ColumnInfo Id="Reviewed" Width="90" />
+				<ColumnInfo Id="Comment" Width="330" />
+				<ColumnInfo Id="Oid" Removed="True" />
+			</Columns>
+		</ListView>
 	</Views>
 </Application>
