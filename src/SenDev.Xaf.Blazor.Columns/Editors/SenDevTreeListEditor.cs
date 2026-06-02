@@ -4,34 +4,17 @@ using DevExpress.ExpressApp.Model;
 
 namespace SenDev.Xaf.Blazor.Columns.Editors;
 
-public class SenDevTreeListEditor : DxTreeListEditor, IColumnWidthMode
+public class SenDevTreeListEditor : DxTreeListEditor, ISupportsColumnWidthMode
 {
     public SenDevTreeListEditor(IModelListView model) : base(model)
     { }
 
     protected override DxGridColumnWrapperBase CreateColumnWrapper(DxDataColumnBaseModel dataColumnModel)
-        => new SenDevGridColumnWrapper((DxGridDataColumnModel)dataColumnModel, this);
+        => new SenDevTreeListColumnWrapper((DxTreeListDataColumnModel)dataColumnModel, this);
 
-    public ColumnWidthMode ColumnWidthMode
-    {
-        get
-        {
-            if (Model.Columns is IModelBlazorColumnWidthMode columnWidthModeModel)
-            {
-                var columnWidthMode = columnWidthModeModel.ColumnWidthMode;
-                if (columnWidthMode != ColumnWidthMode.Default)
-                    return columnWidthMode;
-            }
+    public IModelBlazorColumnWidthMode? ColumnsModel => (IModelBlazorColumnWidthMode)Model.Columns;
 
-            if (Model.Application.Options is IModelBlazorColumnWidthMode optionsColumnWidthModeModel)
-            {
-                var columnWidthMode = optionsColumnWidthModeModel.ColumnWidthMode;
-                if (columnWidthMode != ColumnWidthMode.Default)
-                    return columnWidthMode;
-            }
-            return ColumnWidthMode.Default;
-        }
-    }
+    public IModelBlazorColumnWidthMode? ApplicationOptionsModel => (IModelBlazorColumnWidthMode)Model.Application.Options;
 
 }
 

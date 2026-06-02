@@ -15,7 +15,7 @@ public sealed class ReplaceDxGridWithSenDevUpdater : ModelNodesGeneratorUpdater<
             if (lv.EditorType != null && lv.EditorType == typeof(DxGridListEditor))
                 lv.EditorType = typeof(SenDevGridListEditor);
             if (lv.EditorType != null && lv.EditorType == typeof(DxTreeListEditor))
-                lv.EditorType = typeof(SenDevGridListEditor);
+                lv.EditorType = typeof(SenDevTreeListEditor);
         }
     }
 

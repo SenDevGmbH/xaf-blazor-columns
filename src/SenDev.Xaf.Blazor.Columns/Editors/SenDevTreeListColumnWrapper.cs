@@ -6,9 +6,9 @@ using System.Globalization;
 
 namespace SenDev.Xaf.Blazor.Columns.Editors;
 
-public class SenDevGridColumnWrapper : DxGridColumnWrapper
+public class SenDevTreeListColumnWrapper : DxTreeListColumnWrapper
 {
-    public SenDevGridColumnWrapper(DxGridDataColumnModel dxGridDataColumnModel, DxGridListEditorBase gridListEditor) : base(dxGridDataColumnModel, gridListEditor.GridSummary)
+    public SenDevTreeListColumnWrapper(DxTreeListDataColumnModel dxGridDataColumnModel, DxGridListEditorBase gridListEditor) : base(dxGridDataColumnModel, gridListEditor.GridSummary)
     {
         DataColumnModel = dxGridDataColumnModel;
         if (gridListEditor is ISupportsColumnWidthMode editor)
