@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <Deterministic>false</Deterministic>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Configurations>Debug;Release;EasyTest</Configurations>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.ExpressApp" />
+    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" />
+    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" />
+    <PackageReference Include="DevExpress.ExpressApp.Xpo" />
+    <PackageReference Include="DevExpress.Xpo" />
+    <PackageReference Include="DevExpress.Persistent.Base" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" />
+    <PackageReference Include="Microsoft.Data.SqlClient" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SenDev.Xaf.Blazor.Columns\SenDev.Xaf.Blazor.Columns.csproj" />
+  </ItemGroup>
+</Project>

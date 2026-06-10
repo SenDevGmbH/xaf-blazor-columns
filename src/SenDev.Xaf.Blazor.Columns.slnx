@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="SenDev.Xaf.Blazor.Columns.Demo/SenDev.Xaf.Blazor.Columns.Demo.Blazor.Server/SenDev.Xaf.Blazor.Columns.Demo.Blazor.Server.csproj" Id="308d2087-5f7c-4eaa-813e-7b3adffbb5f8" />
+  <Project Path="SenDev.Xaf.Blazor.Columns.Demo/SenDev.Xaf.Blazor.Columns.Demo.Module/SenDev.Xaf.Blazor.Columns.Demo.Module.csproj" Id="99eee3df-7d2b-4922-ae5e-4be9f7606ced" />
   <Project Path="SenDev.Xaf.Blazor.Columns/SenDev.Xaf.Blazor.Columns.csproj" />
 </Solution>

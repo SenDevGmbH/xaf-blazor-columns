@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <Columns Id="Columns@ac961096-a307-438f-9848-89ec30323a77" UnusableNodeName="Columns">
+      <ColumnInfo Id="Name" MinWidth="200" Width="100" />
+      <ColumnInfo Id="StartDate" Width="100" MinWidth="50" />
+      <ColumnInfo Id="Description" Width="100" MinWidth="0" />
+    </Columns>
+  </Views>
+</Application>

@@ -4,13 +4,13 @@ using DevExpress.ExpressApp.Model;
 
 namespace SenDev.Xaf.Blazor.Columns.Editors;
 
-public class SenDevGridListEditor : DxGridListEditor, ISupportsColumnWidthMode
+public class SenDevTreeListEditor : DxTreeListEditor, ISupportsColumnWidthMode
 {
-    public SenDevGridListEditor(IModelListView model) : base(model)
+    public SenDevTreeListEditor(IModelListView model) : base(model)
     { }
 
     protected override DxGridColumnWrapperBase CreateColumnWrapper(DxDataColumnBaseModel dataColumnModel)
-        => new SenDevGridColumnWrapper((DxGridDataColumnModel)dataColumnModel, this);
+        => new SenDevTreeListColumnWrapper((DxTreeListDataColumnModel)dataColumnModel, this);
 
     public IModelBlazorColumnWidthMode? ColumnsModel => (IModelBlazorColumnWidthMode)Model.Columns;
 
