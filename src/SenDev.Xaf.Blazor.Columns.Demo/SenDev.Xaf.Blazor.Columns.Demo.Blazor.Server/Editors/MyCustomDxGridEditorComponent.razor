@@ -1,0 +1,17 @@
+@namespace SenDev.Xaf.Blazor.Columns.Demo.Blazor.Server.Editors
+@inherits DxGrid
+
+<h1 style="color:red;font-size:44px;">@HeaderText</h1>
+@{
+    base.BuildRenderTree(__builder);
+}
+@code {
+
+    [Parameter]
+    public string HeaderText { get; set; }
+    protected override RenderFragment<RenderFragment> CreateRootComponent()
+    {
+        return base.CreateRootComponent();
+
+    }
+}
