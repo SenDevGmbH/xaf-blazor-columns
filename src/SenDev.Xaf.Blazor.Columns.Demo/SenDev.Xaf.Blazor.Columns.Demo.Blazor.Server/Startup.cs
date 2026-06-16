@@ -34,7 +34,6 @@ public class Startup
                 {
                     options.AllowValidationDetailsAccess = false;
                 })
-                .Add<SenDevXafBlazorColumnsModule>()
                 .Add<SenDev.Xaf.Blazor.Columns.Demo.Module.SenDevXafBlazorColumnsDemoModule>()
                 .Add<SenDevXafBlazorColumnsDemoBlazorModule>();
             builder.ObjectSpaceProviders
