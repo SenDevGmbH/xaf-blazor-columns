@@ -10,11 +10,13 @@ public class SenDevTreeListEditor : DxTreeListEditor, ISupportsColumnWidthMode
     { }
 
     protected override DxGridColumnWrapperBase CreateColumnWrapper(DxDataColumnBaseModel dataColumnModel)
-        => new SenDevTreeListColumnWrapper((DxTreeListDataColumnModel)dataColumnModel, this);
+        => ColumnWidthEditorSupport.CreateTreeListColumnWrapper(dataColumnModel, this);
 
-    public IModelBlazorColumnWidthMode? ColumnsModel => (IModelBlazorColumnWidthMode)Model.Columns;
+    public IModelBlazorColumnWidthMode? ListViewModel => ColumnWidthEditorSupport.GetListViewModel(this);
 
-    public IModelBlazorColumnWidthMode? ApplicationOptionsModel => (IModelBlazorColumnWidthMode)Model.Application.Options;
+    public IModelBlazorColumnWidthMode? ColumnsModel => ColumnWidthEditorSupport.GetColumnsModel(this);
+
+    public IModelBlazorColumnWidthMode? ApplicationOptionsModel => ColumnWidthEditorSupport.GetApplicationOptionsModel(this);
 
 }
 

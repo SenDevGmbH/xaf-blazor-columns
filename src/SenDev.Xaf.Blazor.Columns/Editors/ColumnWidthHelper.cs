@@ -6,7 +6,7 @@ using System.Globalization;
 
 namespace SenDev.Xaf.Blazor.Columns.Editors;
 
-internal static class ColumnWidthHelper
+public static class ColumnWidthHelper
 {
     public static int GetWidth(DxDataColumnBaseModel dataColumnModel, ISupportsColumnWidthMode? gridListEditor, int baseWidth)
     {
