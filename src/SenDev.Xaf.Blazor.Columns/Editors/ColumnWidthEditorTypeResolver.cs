@@ -6,7 +6,7 @@ internal static class ColumnWidthEditorTypeResolver
 {
     public static Type? GetReplacementEditorType(Type? editorType)
     {
-        if (editorType is null || ColumnWidthEditorAdapterFactory.IsGeneratedAdapterType(editorType))
+        if (editorType is null)
         {
             return null;
         }
@@ -29,12 +29,12 @@ internal static class ColumnWidthEditorTypeResolver
 
         if (typeof(DxTreeListEditor).IsAssignableFrom(editorType))
         {
-            return ColumnWidthEditorAdapterFactory.GetTreeAdapterType(editorType);
+            return typeof(SenDevTreeListEditor);
         }
 
         if (typeof(DxGridListEditor).IsAssignableFrom(editorType))
         {
-            return ColumnWidthEditorAdapterFactory.GetGridAdapterType(editorType);
+            return typeof(SenDevGridListEditor);
         }
 
         return null;
