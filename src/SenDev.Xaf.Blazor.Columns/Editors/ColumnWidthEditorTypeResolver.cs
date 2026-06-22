@@ -27,16 +27,6 @@ internal static class ColumnWidthEditorTypeResolver
             return typeof(SenDevGridListEditor);
         }
 
-        if (typeof(DxTreeListEditor).IsAssignableFrom(editorType))
-        {
-            return typeof(SenDevTreeListEditor);
-        }
-
-        if (typeof(DxGridListEditor).IsAssignableFrom(editorType))
-        {
-            return typeof(SenDevGridListEditor);
-        }
-
         return null;
     }
 }

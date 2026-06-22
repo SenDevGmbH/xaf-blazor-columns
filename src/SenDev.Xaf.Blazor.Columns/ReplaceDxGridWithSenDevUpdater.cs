@@ -9,6 +9,27 @@ public sealed class ReplaceDxGridWithSenDevUpdater : ModelNodesGeneratorUpdater<
 {
     public override void UpdateNode(ModelNode node)
     {
-        BlazorColumnWidthEditorModelUpdater.Apply((IModelViews)node);
+        var viewsModel = (IModelViews)node;
+        foreach (var lv in viewsModel.OfType<IModelListView>())
+        {
+            var editorType = lv.EditorType;
+            
+            if (editorType is null)
+                continue;
+
+            if (editorType == typeof(SenDevGridListEditor) || editorType == typeof(SenDevTreeListEditor))
+                continue;
+
+            if (editorType == typeof(DxTreeListEditor))
+            {
+                lv.EditorType = typeof(SenDevTreeListEditor);
+                continue;
+            }
+
+            if (editorType == typeof(DxGridListEditor))
+            {
+                lv.EditorType = typeof(SenDevGridListEditor);
+            }
+        }
     }
 }

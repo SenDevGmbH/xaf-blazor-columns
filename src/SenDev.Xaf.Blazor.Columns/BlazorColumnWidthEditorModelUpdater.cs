@@ -9,9 +9,7 @@ internal static class BlazorColumnWidthEditorModelUpdater
     public static void Apply(IModelApplication? model)
     {
         if (model is null)
-        {
             return;
-        }
 
         Apply(model.Views);
     }
@@ -61,9 +59,7 @@ internal static class BlazorColumnWidthEditorModelUpdater
     {
         var property = modelNode.GetType().GetProperty(propertyName);
         if (property is null || !property.CanWrite)
-        {
             return;
-        }
 
         if (property.PropertyType.IsInstanceOfType(replacementType))
         {
@@ -94,23 +90,17 @@ internal static class BlazorColumnWidthEditorModelUpdater
     private static Type? ResolveEditorType(string? editorTypeName)
     {
         if (string.IsNullOrWhiteSpace(editorTypeName))
-        {
             return null;
-        }
 
         var editorType = Type.GetType(editorTypeName, throwOnError: false);
         if (editorType is not null)
-        {
             return editorType;
-        }
 
         foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
         {
             editorType = assembly.GetType(editorTypeName, throwOnError: false);
             if (editorType is not null)
-            {
                 return editorType;
-            }
         }
 
         return editorTypeName switch
