@@ -13,23 +13,19 @@ public sealed class SenDevXafBlazorColumnsDemoBlazorModule : ModuleBase
     public SenDevXafBlazorColumnsDemoBlazorModule()
     {
     }
-    public override void Setup(XafApplication application)
-    {
-        base.Setup(application);
-        application.SetupComplete += ApplicationOnSetupComplete;
-        application.LoggedOn += ApplicationOnLoggedOn;
-    }
-
     public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB)
     {
         return ModuleUpdater.EmptyModuleUpdaters;
     }
-
+    public override void Setup(XafApplication application)
+    {
+        base.Setup(application);
+    }
 
     protected override void RegisterEditorDescriptors(EditorDescriptorsFactory editorDescriptorsFactory)
     {
         base.RegisterEditorDescriptors(editorDescriptorsFactory);
-        editorDescriptorsFactory.RegisterListEditorAlias(MyCustomDxGridEditor.Alias, typeof(object), true);
-        editorDescriptorsFactory.RegisterListEditor(MyCustomDxGridEditor.Alias, typeof(object), typeof(MyCustomDxGridEditor), false);
+        editorDescriptorsFactory.RegisterListEditorAlias(nameof(MyCustomDxGridEditor), typeof(object), true);
+        editorDescriptorsFactory.RegisterListEditor(nameof(MyCustomDxGridEditor), typeof(object), typeof(MyCustomDxGridEditor), false);
     }
 }

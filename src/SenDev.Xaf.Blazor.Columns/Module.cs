@@ -33,8 +33,6 @@ public sealed partial class SenDevXafBlazorColumnsModule : ModuleBase
     public override void Setup(XafApplication application)
     {
         base.Setup(application);
-        application.SetupComplete += ApplicationOnSetupComplete;
-        application.LoggedOn += ApplicationOnLoggedOn;
     }
 
     public override void AddGeneratorUpdaters(ModelNodesGeneratorUpdaters updaters)
@@ -51,19 +49,5 @@ public sealed partial class SenDevXafBlazorColumnsModule : ModuleBase
         editorDescriptorsFactory.RegisterListEditor(nameof(SenDevTreeListEditor), typeof(object), typeof(SenDevTreeListEditor), false);
     }
 
-    private static void ApplicationOnSetupComplete(object? sender, EventArgs e)
-    {
-        if (sender is XafApplication application)
-        {
-            BlazorColumnWidthEditorModelUpdater.Apply(application.Model);
-        }
-    }
 
-    private static void ApplicationOnLoggedOn(object? sender, LogonEventArgs e)
-    {
-        if (sender is XafApplication application)
-        {
-            BlazorColumnWidthEditorModelUpdater.Apply(application.Model);
-        }
-    }
 }

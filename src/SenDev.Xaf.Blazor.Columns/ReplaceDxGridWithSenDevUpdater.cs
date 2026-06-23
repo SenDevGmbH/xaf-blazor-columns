@@ -12,24 +12,10 @@ public sealed class ReplaceDxGridWithSenDevUpdater : ModelNodesGeneratorUpdater<
         var viewsModel = (IModelViews)node;
         foreach (var lv in viewsModel.OfType<IModelListView>())
         {
-            var editorType = lv.EditorType;
-            
-            if (editorType is null)
-                continue;
-
-            if (editorType == typeof(SenDevGridListEditor) || editorType == typeof(SenDevTreeListEditor))
-                continue;
-
-            if (editorType == typeof(DxTreeListEditor))
-            {
-                lv.EditorType = typeof(SenDevTreeListEditor);
-                continue;
-            }
-
-            if (editorType == typeof(DxGridListEditor))
-            {
+            if (lv.EditorType != null && lv.EditorType == typeof(DxGridListEditor))
                 lv.EditorType = typeof(SenDevGridListEditor);
-            }
+            if (lv.EditorType != null && lv.EditorType == typeof(DxTreeListEditor))
+                lv.EditorType = typeof(SenDevTreeListEditor);
         }
     }
 }
