@@ -15,7 +15,8 @@ public sealed class SenDevXafBlazorColumnsDemoModule : ModuleBase
         RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
         RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.ConditionalAppearance.ConditionalAppearanceModule));
         RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Validation.ValidationModule));
-        RequiredModuleTypes.Add(typeof(SenDev.Xaf.Blazor.Columns.SenDevXafBlazorColumnsModule));
+        RequiredModuleTypes.Add(typeof(SenDevXafBlazorColumnsModule));
+
     }
     public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB)
     {
