@@ -18,4 +18,5 @@ public sealed class ReplaceDxGridWithSenDevUpdater : ModelNodesGeneratorUpdater<
                 lv.EditorType = typeof(SenDevTreeListEditor);
         }
     }
+
 }
