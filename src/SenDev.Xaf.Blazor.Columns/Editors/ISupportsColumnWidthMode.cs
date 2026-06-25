@@ -2,11 +2,18 @@ namespace SenDev.Xaf.Blazor.Columns.Editors;
 
 public interface ISupportsColumnWidthMode
 {
-   public ColumnWidthMode ColumnWidthMode
+    public ColumnWidthMode ColumnWidthMode
     {
         get
         {
-            if (ColumnsModel  is not  null)
+            if (ListViewModel is not null)
+            {
+                var columnWidthMode = ListViewModel.ColumnWidthMode;
+                if (columnWidthMode != ColumnWidthMode.Default)
+                    return columnWidthMode;
+            }
+
+            if (ColumnsModel is not null)
             {
                 var columnWidthMode = ColumnsModel.ColumnWidthMode;
                 if (columnWidthMode != ColumnWidthMode.Default)
@@ -23,8 +30,9 @@ public interface ISupportsColumnWidthMode
         }
     }
 
+    IModelBlazorColumnWidthMode? ListViewModel { get; }
+
     IModelBlazorColumnWidthMode? ColumnsModel { get; }
 
     IModelBlazorColumnWidthMode? ApplicationOptionsModel { get; }
-
 }

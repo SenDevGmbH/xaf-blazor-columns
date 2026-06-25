@@ -10,11 +10,13 @@ public class SenDevGridListEditor : DxGridListEditor, ISupportsColumnWidthMode
     { }
 
     protected override DxGridColumnWrapperBase CreateColumnWrapper(DxDataColumnBaseModel dataColumnModel)
-        => new SenDevGridColumnWrapper((DxGridDataColumnModel)dataColumnModel, this);
+        => ColumnWidthEditorSupport.CreateGridColumnWrapper(dataColumnModel, this);
 
-    public IModelBlazorColumnWidthMode? ColumnsModel => (IModelBlazorColumnWidthMode)Model.Columns;
+    public IModelBlazorColumnWidthMode? ListViewModel => ColumnWidthEditorSupport.GetListViewModel(this);
 
-    public IModelBlazorColumnWidthMode? ApplicationOptionsModel => (IModelBlazorColumnWidthMode)Model.Application.Options;
+    public IModelBlazorColumnWidthMode? ColumnsModel => ColumnWidthEditorSupport.GetColumnsModel(this);
+
+    public IModelBlazorColumnWidthMode? ApplicationOptionsModel => ColumnWidthEditorSupport.GetApplicationOptionsModel(this);
 
 }
 

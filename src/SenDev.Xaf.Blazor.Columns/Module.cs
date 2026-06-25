@@ -25,6 +25,7 @@ public sealed partial class SenDevXafBlazorColumnsModule : ModuleBase
         base.ExtendModelInterfaces(extenders);
         extenders.Add<IModelOptionsBlazor, IModelBlazorColumnWidthMode>();
         extenders.Add<IModelColumns, IModelBlazorColumnWidthMode>();
+        extenders.Add<IModelListView, IModelBlazorColumnWidthMode>();
     }
 
     public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB) => [];
@@ -43,7 +44,10 @@ public sealed partial class SenDevXafBlazorColumnsModule : ModuleBase
     {
         base.RegisterEditorDescriptors(editorDescriptorsFactory);
         editorDescriptorsFactory.RegisterListEditorAlias(nameof(SenDevGridListEditor), typeof(object), true);
-        editorDescriptorsFactory.RegisterListEditor(nameof(SenDevGridListEditor), typeof(object), typeof(SenDevGridListEditor), true);
+        editorDescriptorsFactory.RegisterListEditor(nameof(SenDevGridListEditor), typeof(object), typeof(SenDevGridListEditor), false);
+        editorDescriptorsFactory.RegisterListEditorAlias(nameof(SenDevTreeListEditor), typeof(object), true);
+        editorDescriptorsFactory.RegisterListEditor(nameof(SenDevTreeListEditor), typeof(object), typeof(SenDevTreeListEditor), false);
     }
+
 
 }

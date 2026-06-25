@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application>
   <Options UIType="TabbedMDI"
          FormStyle="Ribbon"
          RestoreTabbedMdiLayout="True"
          ShowTabImage="True"
+		 ColumnWidthMode="0"
 	 VirtualScrollingEnabled="True">
   </Options>
   <NavigationItems NavigationStyle="Accordion" />
