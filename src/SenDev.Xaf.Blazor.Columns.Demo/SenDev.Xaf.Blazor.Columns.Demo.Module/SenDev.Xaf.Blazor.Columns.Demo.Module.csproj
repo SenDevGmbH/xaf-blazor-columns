@@ -16,7 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="DevExpress.ExpressApp" />
-    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" />
     <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" />
     <PackageReference Include="DevExpress.ExpressApp.Validation" />
     <PackageReference Include="DevExpress.ExpressApp.Xpo" />

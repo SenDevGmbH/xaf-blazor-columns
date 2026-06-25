@@ -10,8 +10,10 @@
     <PackageIdSuffix Condition="'$(IsSelfCompiled)' == 'true'">.SelfCompiled</PackageIdSuffix>
     <PackageId>$(MSBuildProjectName)$(PackageIdSuffix)</PackageId>
     <Description>
-        An XAF module that enhances column width management in DevExpress XAF Blazor applications.
-        It adds Proportional column width mode to the standard grid list editor, enabling responsive column sizing based on relative proportions.
-  </Description>
+      An XAF module that enhances column width management in DevExpress XAF Blazor applications.
+      It adds Proportional column width mode to the standard grid list editor, enabling responsive
+      column sizing based on relative proportions.
+    </Description>
+    <NoWarn>NU1507</NoWarn>
   </PropertyGroup>
 </Project>

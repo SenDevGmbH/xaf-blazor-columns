@@ -12,7 +12,7 @@ public static class ColumnWidthHelper
     {
         if (gridListEditor?.ColumnWidthMode == ColumnWidthMode.Proportional)
         {
-            string widthText = dataColumnModel.Width?.Replace("%", "");
+            var widthText = dataColumnModel.Width?.Replace("%", "");
             if (BindConverter.TryConvertToDouble(widthText, CultureInfo.InvariantCulture, out double width))
                 return Convert.ToInt32(Math.Round(width));
         }

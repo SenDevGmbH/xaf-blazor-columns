@@ -9,6 +9,8 @@ public class SenDevTreeListColumnWrapper : DxTreeListColumnWrapper
     {
         if (gridListEditor is ISupportsColumnWidthMode editor)
             GridListEditor = editor;
+        else
+            throw new ArgumentException($"The provided gridListEditor does not implement {nameof(ISupportsColumnWidthMode)}.", nameof(gridListEditor));
     }
 
     private ISupportsColumnWidthMode GridListEditor { get; }
